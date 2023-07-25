@@ -5,7 +5,6 @@ import './Warning.css';
 
 const Warning = () => {
     const [btnClicked, setBtnClicked] = useState(false);
-    console.log(btnClicked);
 
     return (
         <div className={btnClicked ? `disclaimer hidden` : `disclaimer`}>
