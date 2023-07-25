@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #000032;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ffffff27;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+.navbar .menu {
+    font-size: 26px;
+    cursor: pointer;
+}
+.navbar .logo {
+    width: 250px;
+}
+.navbar .search {
+}
