@@ -21,8 +21,9 @@ const FetchMovies = ({ fetchURL, name }) => {
                     id={movie.id}
                     key={movie.id}
                     title={movie.title}
-                    overview={movie.overview}
+                    type={movie.media_type}
                     poster={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                    releaseDate={movie.release_date}
                     name={name}
                 />
             ))}

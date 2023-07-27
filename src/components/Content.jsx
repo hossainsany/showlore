@@ -1,9 +1,9 @@
 import MoviesSection from './MoviesSection';
-import './Content.css';
+import style from './Content.module.scss';
 
 const Content = () => {
     return (
-        <main className='content'>
+        <main className={style.content}>
             {/* trending movies */}
             <MoviesSection fetchURL='trending/all/week' name='Trending Movies' styleClass='trending' />
             <MoviesSection fetchURL='movie/now_playing' name='Now In Theater' styleClass='now-playing' />

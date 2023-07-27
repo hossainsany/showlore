@@ -1,0 +1,68 @@
+@import '../styles/colors';
+
+.movie {
+    height: 450px;
+    width: 300px;
+    color: $light-text;
+    position: relative;
+    margin: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    flex: 0 0 300px;
+    transition: 300ms ease-out;
+    &:hover .text {
+        opacity: 1;
+        cursor: pointer;
+        transition: 300ms ease-in;
+    }
+    &:hover img {
+        transform: scale(1.03);
+        filter: blur(6px);
+
+        transition: 300ms ease-out;
+    }
+    &.skeleton {
+        animation: skeleton-loading 1s linear infinite alternate;
+    }
+    @keyframes skeleton-loading {
+        0% {
+            background-color: #000;
+        }
+        100% {
+            background-color: #505050;
+        }
+    }
+    .text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        z-index: 1;
+        background: #00000060;
+        backdrop-filter: blur(0px);
+        opacity: 0;
+        transition: 400ms ease-in;
+    }
+    .poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 300ms ease-out;
+        }
+    }
+}

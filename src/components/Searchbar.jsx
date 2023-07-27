@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-import './Searchbar.css';
+import style from './Searchbar.module.scss';
 import { useState } from 'react';
 
 const Searchbar = () => {
@@ -16,13 +16,13 @@ const Searchbar = () => {
     };
 
     return (
-        <div className='searchbar'>
-            <button className='search-btn' onClick={handleClick}>
+        <div className={style.searchbar}>
+            <button className={style.searchBtn} onClick={handleClick}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
-            <form className={btnClicked ? `searchbar-form show` : `searchbar-form`} onSubmit={handleSubmit}>
-                <input type='text' name='search' placeholder='Search' />
-                <button type='submit'>
+            <form className={btnClicked ? `${style.form} ${style.show}` : `${style.form}`} onSubmit={handleSubmit}>
+                <input type='text' name='search' placeholder='Search' className={style.searchInput} />
+                <button type='submit' className={style.btn}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </form>

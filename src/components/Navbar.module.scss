@@ -1,6 +1,8 @@
+@import '../styles/colors';
+
 .navbar {
-    background-color: #000032;
-    color: #fff;
+    background-color: $light-blue;
+    color: $light-text;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,13 +13,12 @@
     left: 0;
     width: 100%;
     z-index: 99;
-}
-.navbar .menu {
-    font-size: 26px;
-    cursor: pointer;
-}
-.navbar .logo {
-    width: 250px;
-}
-.navbar .search {
+    .menu {
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+    }
+    .logo {
+        width: 250px;
+    }
 }

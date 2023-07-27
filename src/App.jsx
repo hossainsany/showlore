@@ -1,5 +1,4 @@
 import Home from './pages/Home';
-import './App.css';
 import Warning from './components/Warning';
 
 function App() {
